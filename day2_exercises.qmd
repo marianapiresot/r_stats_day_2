@@ -1,0 +1,40 @@
+---
+title: "day2_exercises"
+format: html
+---
+
+
+```{r}
+
+score <- runif(10, min = 0, max = 20)
+length(score)
+any(score < 6)
+score[score > 7 & score < 9]
+
+cum_score <- sum(score)
+cum_score
+
+length(cum_score)
+
+testmean <- mean(score, na.rm = TRUE)
+testmean
+
+test <- c(9, NA, 5, 2, NA, 4)
+mean(test, na.rm = TRUE)
+
+
+
+```
+
+
+```{r}
+m <- matrix(1:6, nrow = 2)
+m
+m <- matrix(1:6, nrow = 2, byrow = TRUE)
+m
+
+a <- matrix(0, nrow = 3, ncol =3)
+a
+
+
+```

@@ -1,0 +1,16 @@
+---
+title: "day2_notes"
+format: html
+---
+
+
+```{r}
+set.seed(123)
+age <- sample(1:90, size = 10, replace = TRUE)
+age > 60 | age < 18 |> View()
+age == 14
+age >= 18 & age >= 65 |>  View()
+
+
+
+```
