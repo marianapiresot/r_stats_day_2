@@ -38,3 +38,86 @@ a
 
 
 ```
+
+## slide 22
+```{r}
+
+matrix(c(4,1,9,5,10,7), nrow = 3, ncol = 2, byrow = TRUE)
+A <- matrix(c(4,1,9,5,10,7), nrow = 3, ncol = 2, byrow = TRUE)
+A |> dim()
+dim(A)
+A[2,2]
+
+A <- cbind(A, c(0,0,0))
+A
+
+A[1,1] <- 0
+A
+
+t(A)
+
+```
+
+## slide26
+```{r}
+library(tidyverse)
+weight <- c(55, 72, 48, 90, 66, 103, 59)
+weight
+
+which(weight >80)
+which(weight >=50 & weight <= 70)
+length(weight < 60)
+
+```
+
+
+```{r}
+time_point <- factor(c("before", "after",
+                       "after", "before"))
+time_point
+levels(time_point)
+as.integer(time_point)
+
+dosage <- c("high", "low", "medium", "low")
+factor(dosage)
+factor(dosage, levels = c("low", "medium", "high"))
+```
+
+## slide31 - ex1
+```{r}
+temperature <- c("cold", "cold", "cold", "warm", "warm", "warm", "mild", "mild", "mild")
+temperature
+
+temperature_class <- factor(temperature, levels = c("cold", "mild", "warm"))
+temperature_class
+
+levels(temperature_class)
+as.integer(temperature_class)
+
+
+```
+
+## slide31 - ex2
+```{r}
+temperatures <- rnorm(12, 10, 10)
+temperatures
+
+w_class <- cut(temperatures, 
+breaks = c(-15,0,15,30),
+labels = levels(temperature_class))
+w_class
+
+```
+
+
+```{r}
+swiss
+typeof(swiss)
+class(swiss)
+summary(swiss$Agriculture)
+sd(swiss$Agriculture)
+quantile(swiss$Agriculture, probs = c(0.1, 0.9))
+summary(swiss$Catholic)
+sd(swiss$Catholic)
+
+```
